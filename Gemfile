@@ -1,3 +1,3 @@
 source "https://rubygems.org"
 
-gem 'cucumber', '~> 1.3.19'
+gem "rspec", "~> 3.0"

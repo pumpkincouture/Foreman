@@ -1,9 +1,13 @@
-class Apprentice
+require 'date'
 
-  attr_reader :name, :last_name
+class Apprentice
+  attr_reader :first_name, :last_name, :email, :end_date, :foreman
 
   def initialize(params = {})
-    @name = params.fetch(:name)
+    @first_name = params.fetch(:first_name)
     @last_name = params.fetch(:last_name)
+    @email = params.fetch(:email)
+    @end_date = Date.strptime(params.fetch(:end_date), "%Y-%m-%d")
+    @foreman = params.fetch(:foreman, false)
   end
 end
